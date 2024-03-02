@@ -170,17 +170,13 @@ class _DropdownExampleState extends State<DropdownExample> {
           const SizedBox(height: 50),
           SimpleDropdown<String>.list(
             controller: _singleSearchController,
-            builder: (_) => Container(
+            builder: (_) => SizedBox(
               width: 150,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.circular(4),
-              ),
               child: TextField(
                 controller: _singleSearch,
                 decoration: const InputDecoration(
                   labelText: "Single Search",
-                  border: InputBorder.none,
+                  border: OutlineInputBorder(),
                 ),
                 onChanged: (value) {
                   if (!_singleSearchController.isOpen) {
@@ -223,17 +219,13 @@ class _DropdownExampleState extends State<DropdownExample> {
           const SizedBox(height: 50),
           SimpleDropdown<String>.list(
             controller: _multiSearchController,
-            builder: (_) => Container(
+            builder: (_) => SizedBox(
               width: 150,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.circular(4),
-              ),
               child: TextField(
                 controller: _multiSearch,
                 decoration: const InputDecoration(
                   labelText: "Multi Search",
-                  border: InputBorder.none,
+                  border: OutlineInputBorder(),
                 ),
                 onChanged: (value) {
                   if (!_multiSearchController.isOpen) {

@@ -76,7 +76,7 @@ abstract mixin class _MenuStatusNotifier {
 }
 
 abstract base class DropdownItemManager<T>
-    with _ItemSearchHistoryBucket<T>, _MenuStatusNotifier {
+    with _ItemSearchHistoryBucket<T>, _MenuStatusNotifier, ChangeNotifier {
   /// Set the given items to the dropdown menu.
   /// if [replace], the current items will be replaced with the given items, and all history will be cleared.
   /// if [rebuild], the menu will be rebuilt after the items are set.
@@ -185,6 +185,14 @@ abstract base class DropdownItemManager<T>
   /// The current items that will be shown in the dropdown menu.
   List<T> get _currentItemValues =>
       _currentHistory?.items ?? _itemValues.toList();
+
+  @override
+  void dispose() {
+    _clearHistory();
+    _itemValues.clear();
+    _loading = false;
+    super.dispose();
+  }
 }
 
 mixin DropdownOverlayBuilderDelegate<W extends StatefulWidget> on State<W> {
@@ -192,8 +200,7 @@ mixin DropdownOverlayBuilderDelegate<W extends StatefulWidget> on State<W> {
 }
 
 /// The controller that will be used to control the dropdown menu.
-abstract base class DropdownController<T> extends DropdownItemManager<T>
-    with ChangeNotifier {
+abstract base class DropdownController<T> extends DropdownItemManager<T> {
   final bool _unselectable;
   DropdownController(this._unselectable);
 
