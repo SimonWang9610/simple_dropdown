@@ -17,14 +17,14 @@ A Flutter package that provides a simple way to create a customized Dropdown wid
 
 - only selectable dropdown
 <div style="float: left">
-    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/single-selection.gif?raw=true", width="200">
-    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/multiple-selection.gif?raw=true", width="200">
+    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/single-selection.gif?raw=true", width="400">
+    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/multiple-selection.gif?raw=true", width="400">
 </div>
 
 - searchable and selectable dropdown
 <div style="float:left">
-    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/searchable-single-selection.gif?raw=true", width="200">
-    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/searchable-multiple-selection.gif?raw=true", width="200">
+    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/searchable-single-selection.gif?raw=true", width="400">
+    <img src="https://github.com/SimonWang9610/simple_dropdown/blob/main/snapshots/searchable-multiple-selection.gif?raw=true", width="400">
 </div>
 
 1. Support Dropdown customization
