@@ -1,7 +1,9 @@
 name: dropdown_overlay
 description: "A Dropdown component enabled with fully UI customization and programmatically control: open/dismiss/select/search/load"
 version: 0.1.0
-homepage:
+homepage: https://github.com/SimonWang9610/simple_dropdown
+repository: https://github.com/SimonWang9610/simple_dropdown
+issue_tracker: https://github.com/SimonWang9610/simple_dropdown/issues
 
 environment:
   sdk: '>=3.2.6 <4.0.0'

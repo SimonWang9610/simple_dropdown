@@ -39,27 +39,27 @@ class DropdownExample extends StatefulWidget {
 class _DropdownExampleState extends State<DropdownExample> {
   final _singleSelectionController = DropdownController<String>.single(
     items: List.generate(
-      5,
+      15,
       (index) => DropdownItem(value: "Single $index"),
     ),
   );
   final _multiSelectionController = DropdownController<String>.multi(
     items: List.generate(
-      5,
+      15,
       (index) => DropdownItem(value: "Multi $index"),
     ),
   );
 
   final _singleSearchController = DropdownController<String>.single(
     items: List.generate(
-      5,
+      15,
       (index) => DropdownItem(value: "Single Search $index"),
     ),
   );
 
   final _multiSearchController = DropdownController<String>.multi(
     items: List.generate(
-      5,
+      15,
       (index) => DropdownItem(value: "Multi Search $index"),
     ),
   );

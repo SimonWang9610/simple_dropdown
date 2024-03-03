@@ -212,7 +212,11 @@ abstract base class DropdownController<T> extends DropdownItemManager<T> {
   ///
   /// Only one item can be selected at a time.
   factory DropdownController.single({
+    // Default is false.
     bool? unselectable,
+
+    /// The initial items that will be shown in the dropdown menu,
+    /// but you can only set one of them as selected.
     List<DropdownItem<T>>? items,
   }) = SingleSelectionDropdownController;
 
@@ -222,7 +226,11 @@ abstract base class DropdownController<T> extends DropdownItemManager<T> {
   /// if true, tapping the same selected item will unselect it;
   /// otherwise, it will be ignored.
   factory DropdownController.multi({
+    // Default is false.
     bool? unselectable,
+
+    /// The initial items that will be shown in the dropdown menu,
+    /// you can set multiple of them as selected.
     List<DropdownItem<T>>? items,
   }) = MultiSelectionDropdownController;
 

@@ -67,7 +67,7 @@ class SimpleDropdown<T> extends StatefulWidget {
   /// Typically, it is specific if the dropdown menu should have the same width as the dropdown trigger.
   final bool crossAxisConstrained;
 
-  /// Whether the dropdown menu should be dismissed when the user taps outside of it.
+  /// Whether the dropdown menu should be dismissed when the user taps outside of both it and the dropdown button.
   final bool dismissible;
 
   /// if true, the dropdown will be interactive automatically;
@@ -103,9 +103,20 @@ class SimpleDropdown<T> extends StatefulWidget {
     this.crossAxisConstrained = true,
     this.dismissible = true,
     this.enabled = true,
+
+    /// The builder that will be used to build the items in the dropdown menu.
     required MenuItemBuilder<T> itemBuilder,
+
+    /// The builder that will be used to build the separator in the dropdown menu.
+    /// it would use [LiveView.separated] internally to build the dropdown menu if provided.
     IndexedWidgetBuilder? separatorBuilder,
+
+    /// The builder that will be used to build the loading indicator in the dropdown menu.
+    /// Default to a [CircularProgressIndicator] if not provided.
     WidgetBuilder? loadingBuilder,
+
+    /// The builder that will be used to build the empty list indicator in the dropdown menu.
+    /// Default to Text("No items") if not provided.
     WidgetBuilder? emptyListBuilder,
   }) : delegate = ListViewMenuBuilderDelegate<T>(
           itemBuilder: itemBuilder,
@@ -119,6 +130,8 @@ class SimpleDropdown<T> extends StatefulWidget {
     super.key,
     required this.builder,
     required this.controller,
+
+    /// The builder that will be used to build the dropdown menu.
     required DropdownMenuBuilder<T> menuBuilder,
     this.menuConstraints,
     this.menuDecoration,
