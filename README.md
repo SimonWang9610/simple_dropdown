@@ -253,8 +253,6 @@ import 'package:dropdown_overlay/dropdown_overlay.dart';
 - `void restore({bool onlyOnce = false})`: restore the initial and loaded items.
   - `onlyOnce`: if true, only pop the top history entry; otherwise, it will clear all history entries to show the initial and loaded items.
 
-## Additional information
+## TODO
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+- support dropdown menu animation
